@@ -37,7 +37,6 @@ import ".././assets/css/HomeScreen.css";
 
 function HomeScreen() {
   useEffect(() => {
-    // Add the class to trigger the animation after the component is mounted
     const textElements = document.querySelectorAll(".fade-in-text");
     textElements.forEach((element) => {
       element.classList.add("fade-in");

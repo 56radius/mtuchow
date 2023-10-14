@@ -1038,6 +1038,12 @@ features .icon-box:hover h3 a {
   transition: opacity 1s, transform 1s;
 }
 
+.fade-in-from-right {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: opacity 1s, transform 1s;
+}
+
 .fade-in {
   opacity: 1;
   transform: translateX(0);
