@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 //logo
 import logo from ".././assets/img/logo.png";
@@ -36,6 +36,14 @@ import ".././assets/vendor/swiper/swiper-bundle.min.css";
 import ".././assets/css/HomeScreen.css";
 
 function HomeScreen() {
+  useEffect(() => {
+    // Add the class to trigger the animation after the component is mounted
+    const textElements = document.querySelectorAll(".fade-in-text");
+    textElements.forEach((element) => {
+      element.classList.add("fade-in");
+    });
+  }, []);
+
   const handleButtonClick = () => {};
   return (
     <div>
@@ -70,7 +78,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 1
+                      We offer
                     </button>
                   </li>
 
@@ -84,7 +92,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 2
+                      Food Delivery Services
                     </button>
                   </li>
 
@@ -98,7 +106,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 3
+                      To ease
                     </button>
                   </li>
 
@@ -112,7 +120,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 4
+                      Taste of Students
                     </button>
                   </li>
                 </ul>
@@ -132,7 +140,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 1
+                      There are alot
                     </button>
                   </li>
                   <li>
@@ -145,7 +153,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 1
+                      of Food to order
                     </button>
                   </li>
                   <li>
@@ -158,7 +166,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 1
+                      So why not try us
                     </button>
                   </li>
                   <li>
@@ -171,7 +179,7 @@ function HomeScreen() {
                       }}
                       onClick={() => handleButtonClick()}
                     >
-                      Drop Down 1
+                      Click on "try us" button
                     </button>
                   </li>
                 </ul>
@@ -225,7 +233,7 @@ function HomeScreen() {
                 className="img-fluid more"
                 alt=""
               />
-              <h1>
+              <h1 className="fade-in-text">
                 Be The Fastest <br />
                 In Delivering <br />
                 Your <span style={{ color: "#D21A32" }}>Food</span>

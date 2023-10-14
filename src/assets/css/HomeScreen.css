@@ -1029,3 +1029,16 @@ features .icon-box:hover h3 a {
 .menubutton:hover {
   color: blue;
 }
+
+.fade-in-text {
+  opacity: 0;
+  transform: translateX(
+    -100%
+  ); /* You can change this value to 100% for right-to-left animation */
+  transition: opacity 1s, transform 1s;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateX(0);
+}
