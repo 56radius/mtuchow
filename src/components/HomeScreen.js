@@ -445,7 +445,7 @@ function HomeScreen() {
             </div>
           </div>
         </header>
-        <header id="menu" className="about">
+        <header style={{ marginTop: 150 }} id="menu" className="about">
           <div className="container">
             <div className="row content">
               <div className="col-lg-6">
