@@ -1048,3 +1048,31 @@ features .icon-box:hover h3 a {
   opacity: 1;
   transform: translateX(0);
 }
+
+.mobile-nav {
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  top: 70px;
+  right: 0;
+  left: 55px;
+  width: 270px;
+  border-radius: 20;
+  height: 70%;
+  background-color: #d21a32;
+  z-index: 999;
+  transition: right 0.3s ease;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  right: 99px;
+}
+
+.mobile-nav li {
+  margin: 10px 0;
+}
+
+/* Add more styling as needed */

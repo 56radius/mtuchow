@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 //logo
 import logo from ".././assets/img/logo.png";
@@ -36,6 +36,12 @@ import ".././assets/vendor/swiper/swiper-bundle.min.css";
 import ".././assets/css/HomeScreen.css";
 
 function HomeScreen() {
+  const [isMobileNavOpen, setMobileNavOpen] = useState(false);
+
+  const handleMobileNavToggle = () => {
+    setMobileNavOpen(!isMobileNavOpen);
+  };
+
   useEffect(() => {
     const textElements = document.querySelectorAll(".fade-in-text");
     textElements.forEach((element) => {
@@ -207,10 +213,35 @@ function HomeScreen() {
                 </a>
               </li>
             </ul>
-            <i className="bi bi-list mobile-nav-toggle"></i>
+            <i
+              className="bi bi-list mobile-nav-toggle"
+              onClick={() => handleMobileNavToggle()}
+            ></i>
           </nav>
         </div>
       </header>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileNavOpen && (
+        <div className="mobile-nav">
+          <ul>
+            <li>
+              <a
+                className="nav-link scrollto active"
+                style={{ color: "#D21A32" }}
+                href="#hero"
+                onClick={() => {
+                  handleMobileNavToggle();
+                }}
+              >
+                Why Chow?
+              </a>
+            </li>
+            {/* Add other navigation links here */}
+          </ul>
+        </div>
+      )}
+
       <header
         style={{ background: "#FEF3F3" }}
         id="hero"
@@ -456,7 +487,12 @@ function HomeScreen() {
           <div className="container">
             <div className="row content">
               <div className="col-lg-6">
-                <img src={redesign} className="img-fluid" alt="Redesign" />
+                <img
+                  classame="fade-in-text"
+                  src={redesign}
+                  className="img-fluid"
+                  alt="Redesign"
+                />
               </div>
               <div className="col-lg-6 pt-4 pt-lg-0">
                 <h2
